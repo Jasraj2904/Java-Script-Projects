@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Multiplications</title>
+    </head>
+    <body>
+        <button onclick="Product(x=6)">Click For The Product.</button>
+        <script>
+         function Product(x,y) {
+             if(y===undefined){
+                 y=3;
+             }
+             document.write(x*y)
+         }
+        </script>
+        <p>A Function can access variables defined inside the function.</p>
+        <button type="button" onclick="MyFunction()">Click Me!</button>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <script>
+            var b=5;
+            function MyFunction(){
+                var a=4;
+                document.getElementById("demo").innerHTML=b*a;
+            }
+            document.getElementById("demo1").innerHTML=a;
+            document.getElementById("demo1").innerHTML=b;
+        </script>
+        <p>Setting a default value to a function parameter.</p>
+        <p id="demo"></p>
+        <script>
+            function myFunction(x, y) {
+                        if (y=== undefined) {
+                        y = 2;
+                           }  
+            return x * y ;
+            }
+            document.getElementById("demo").innerHTML = myFunction(5);
+        </script>
+    </body>
+</html>
