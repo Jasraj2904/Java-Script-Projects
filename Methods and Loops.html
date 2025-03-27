@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Set, Date, and Random Number</title>
+</head>
+<body>
+  <h1>JavaScript Set, Date, and Random Number Example</h1>
+
+  <div id="numbers">
+    <h3>Set of Numbers:</h3>
+  </div>
+
+  <div id="current-date">
+    <h3>Current Date:</h3>
+  </div>
+
+  <div id="random-number">
+    <h3>Rounded Random Number:</h3>
+  </div>
+
+  <script>
+    // 1. Printing a set of numbers using a loop
+    let numbers = [1, 2, 3, 4, 5]; // A sample set of numbers
+    let numbersDiv = document.getElementById('numbers');
+    numbersDiv.innerHTML += numbers.join(', '); // Display the numbers
+
+    // 2. Printing the current date
+    let currentDate = new Date();
+    let currentDateDiv = document.getElementById('current-date');
+    currentDateDiv.innerHTML += currentDate.toDateString(); // Display the current date
+
+    // 3. Generating a rounded random number
+    let randomNumber = Math.random() * 100; // Generate random number between 0 and 100
+    let roundedRandomNumber = Math.round(randomNumber); // Round it
+    let randomNumberDiv = document.getElementById('random-number');
+    randomNumberDiv.innerHTML += roundedRandomNumber; // Display the rounded random number
+  </script>
+</body>
+</html>
