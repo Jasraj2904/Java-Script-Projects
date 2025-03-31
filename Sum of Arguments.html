@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum & Trigonometry</title>
+</head>
+<body>
+    <h2>Sum of Arguments</h2>
+    <p id="sumResult"></p>
+
+    <h2>Trigonometric Values</h2>
+    <label for="angle">Enter an angle (degrees):</label>
+    <input type="number" id="angle" value="45">
+    <button onclick="calculateTrig()">Calculate</button>
+    <p id="trigResult"></p>
+
+    <script>
+        // Function to calculate sum of arguments
+        function sum(...args) {
+            return args.reduce((acc, val) => acc + val, 0);
+        }
+
+        // Display sum of numbers
+        document.getElementById("sumResult").innerText = "Sum: " + sum(10, 20, 30, 40);
+
+        // Function to calculate and display trigonometric values
+        function calculateTrig() {
+            let degrees = document.getElementById("angle").value;
+            let radians = degrees * (Math.PI / 180);
+
+            let sine = Math.sin(radians).toFixed(4);
+            let cosine = Math.cos(radians).toFixed(4);
+            let tangent = Math.tan(radians).toFixed(4);
+
+            document.getElementById("trigResult").innerText = 
+                `sin(${degrees}) = ${sine}, cos(${degrees}) = ${cosine}, tan(${degrees}) = ${tangent}`;
+        }
+    </script>
+</body>
+</html>
