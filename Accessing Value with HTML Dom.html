@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Accessing Value with HTML Dom</title>
+    </head>
+    <body>
+        <h2 id="One">Welcome!</h2>
+
+        <P>This is a Welcome Message.</P>
+
+        <p>Technology Section.</p>
+
+        <h2>JavaScript Arrays</h2>
+
+        <p id="demo"></p>
+
+
+<h2>JavaScript Arrays</h2>
+
+<p id="demo"></p>
+
+<h2>JavaScript Array Methods</h2>
+
+<h2>Pop and Join.</h2>
+
+<p id="myJoin"></p>
+
+<p id="My First Pop"></p>
+
+<p id="My Second Pop"></p>
+
+<h1>REAL TIME VALIDATION USING JS</h1>
+
+<hr>
+
+<form id="loginForm" onsubmit="validate(event)">
+
+<!-- Fieldset groups related elements in a form -->
+
+<fieldset>
+
+<!-- Email input field -->
+
+<div>
+
+<label for="email">Email:</label>
+
+<input type="email" id="email" name="email">
+
+</div>
+
+<!-- Password input field with a minimum length requirement -->
+
+<div>
+
+<label for="password">Password:</label>
+
+<!-- minlength attribute ensures the password is at least 8 characters long -->
+
+<input type="password" id="password" name="password" minlength="8">
+
+</div>
+
+<!-- Age input field with minimum and maximum value requirements -->
+
+<div>
+
+<label for="age">Age:</label>
+
+<!-- min and max attributes define the acceptable range of ages -->
+
+<input type="number" id="age" name="age" min="12" max="50">
+
+</div>
+
+<!-- Submit button for the form -->
+
+<button type="submit">Login</button>
+
+</fieldset>
+
+</form>
+
+<!-- Div for displaying validation messages -->
+
+<div id="message"></div>
+
+<!-- Link to the external JavaScript file -->
+
+        <script>
+
+            var text=document.getElementById("One").innerHTML;
+
+            alert("The First Heading is" +text);
+
+            var cars=["Rolls Royce", "Mercedes", "BMW"];
+
+            document.getElementById("demo").innerHTML=cars[1];
+
+            var cars=["Rolls Royce", "Mercedes", "BMW"];
+
+            document.getElementById("demo").innerHTML=cars[1];
+
+            var fruits=["Banana","Apple","Mango","Pear"];
+
+            document.getElementById("myJoin").innerHTML=fruits.join("*");
+
+            document.getElementById("My First Pop").innerHTML=fruits.pop();
+
+            document.getElementById("My Second Pop").innerHTML=fruits;
+
+        </script>
+
+        <script src="forms.js"></script>
+
+    </body>
+
+</html>
