@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sort and Reverse Numbers</title>
+    </head>
+    <body>
+        <h2>JavaScript Array's</h2>
+        <p>Click the button the sort the Array in ascending order.</p>
+        <button onclick="ascending()">Ascending Order</button>
+        <button onclick="descending()">Descending Order</button>
+        <p id="result"></p>
+        <script>
+            var point=[15,35,40,69,85,3];
+            document.getElementById("result").innerHTML=point;
+            function ascending(){
+                point.sort(function(a,b){return a-b});
+                document.getElementById("result").innerHTML=point;
+            }
+            function descending(){
+                point.sort(function(a,b){return b-a});
+                document.getElementById("result").innerHTML=point;
+            }
+        </script>
+    </body>
+</html>
