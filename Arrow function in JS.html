@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrow function in JS</title>
+    </head>
+    <body>
+        <h2>Arrow function in JavaScript.</h2>
+        <p id="result1"></p>
+        <p id="result2"></p>
+        <p id="result3"></p>
+        <p id="result4"></p>
+        <script>
+            add=(a,b)=>a+b;
+            document.getElementById("result1").innerHTML=add(11,32)
+            subtract=(a,b)=>a-b;
+            document.getElementById("result2").innerHTML=subtract(11,32)
+            multiply=(a,b)=>a*b;
+            document.getElementById("result3").innerHTML=multiply(11,32)
+            divide=(a,b)=>a/b;
+            document.getElementById("result4").innerHTML=divide(11,32)
+        </script>
+    </body>
+</html>
