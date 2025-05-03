@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jason in  JavaScript</title>
+    </head>
+    <body>
+        <h2>Covert JavaScript Object into a Jason String and send it to the server.</h2>
+        <p id="result"></p>
+        <script>
+            var myobject={name:"Jasraj",Grade:8,Age:14};
+            var myJSON=JSON.stringify(myobject);
+            var newobject=JSON.parse(myJSON);
+            document.getElementById("result").innerHTML=newobject.name;
+        </script>
+    </body>
+</html>
