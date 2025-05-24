@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calender</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      background-image: url(calendar_background.jpg);
+      background-size: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .date-container {
+      background: #ffffff;
+      padding: 30px 50px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .date-container h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .date-info {
+      font-size: 20px;
+      color: #555;
+    }
+
+    .date-info span {
+      display: block;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="date-container">
+  <h1>Today's Date</h1>
+  <div class="date-info" id="dateInfo">
+    <!-- JavaScript will populate this -->
+  </div>
+</div>
+
+<script>
+  function updateDateInfo() {
+    const date = new Date();
+
+    const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const monthNames = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+
+    const day = dayNames[date.getDay()];
+    const dayNumber = date.getDate();
+    const month = monthNames[date.getMonth()];
+    const year = date.getFullYear();
+
+    const dateInfoDiv = document.getElementById("dateInfo");
+    dateInfoDiv.innerHTML = `
+      <span><strong>Day:</strong> ${day}</span>
+      <span><strong>Date:</strong> ${dayNumber}</span>
+      <span><strong>Month:</strong> ${month}</span>
+      <span><strong>Year:</strong> ${year}</span>
+    `;
+  }
+
+  // Run on page load
+  updateDateInfo();
+</script>
+
+</body>
+</html>
